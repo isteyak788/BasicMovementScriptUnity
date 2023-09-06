@@ -1,0 +1,40 @@
+using UnityEngine;
+
+public class BasicMovement : MonoBehaviour
+{
+    public float moveSpeed = 5.0f;
+    public float runSpeedMultiplier = 2.0f;
+    public float accelerationTime = 1.0f;
+    public float deaccelerationTime = 1.0f;
+    public float jumpForce = 10.0f;
+    public float gravity = 20.0f;
+    public Transform groundCheck;
+    public LayerMask groundLayer;
+    public float groundCheckRadius = 0.2f;
+    public Transform playerCamera;
+    public Transform body;
+
+    private CharacterController controller;
+    private Vector3 moveDirection;
+    private float velocityY;
+    private bool isRunning;
+    private bool isGrounded;
+    private bool wasGrounded;
+    private float currentSpeed;
+
+    // Add other necessary variables and methods here
+
+    private void Awake()
+    {
+        controller = GetComponent<CharacterController>();
+        isRunning = false;
+        // Initialize other variables
+    }
+
+    private void Update()
+    {
+        // Basic movement, jumping, and camera rotation code here
+    }
+
+    // Add methods for movement and rotation here
+}
